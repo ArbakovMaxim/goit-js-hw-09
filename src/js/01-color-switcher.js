@@ -11,6 +11,7 @@ function getRandomHexColor() {
 refs.btnStart.addEventListener("click", onStart)
 
 function  onStart () {
+    refs.body.style.backgroundColor = getRandomHexColor()
     timerId = setInterval(() => {
     refs.body.style.backgroundColor = getRandomHexColor()
     }, 1000)
