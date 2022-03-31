@@ -16,7 +16,7 @@ const refs ={
 
 refs.btnStart.disabled = true;
 
-let ms = 0;
+let timeForTheEndTimer = 0;
 let timerTime = 0;
 
 const options = {
@@ -32,7 +32,7 @@ const options = {
         else{
             timerTime = selectedDates[0].getTime()
             refs.btnStart.disabled = false;
-            convertMs(ms)}
+            convertMs(timeForTheEndTimer)}
     },
   };
  
@@ -49,13 +49,13 @@ function OnTimer(){
 
     const timerId = setInterval(() => {
         const date = new Date();
-        ms = timerTime - date;
+        timeForTheEndTimer  = timerTime - date;
         interfaceOutput()
 
 }, 1000)
 
 function interfaceOutput(){
-    const {days, hours, minutes, seconds} = convertMs(ms)
+    const {days, hours, minutes, seconds} = convertMs(timeForTheEndTimer)
         if(days === 0 && hours === 0 && minutes === 0 && seconds === 0){
             clearInterval(timerId);
     }
