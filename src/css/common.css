@@ -16,3 +16,36 @@ img {
   display: block;
   max-width: 100%;
 }
+
+
+
+                            /* таймер */
+
+
+.timer {
+  font-family: sans-serif;
+  color: #f7e3e3;
+  font-weight: 100;
+  font-size: 30px;
+}
+
+.field {
+  padding: 12px;
+  border-radius: 2px;
+  background: #18caa3;
+  display: inline-block;
+}
+
+.value {
+  padding: 18px;
+  border-radius: 2px;
+  background: #137564;
+  display: inline-block;
+}
+
+.label {
+  display: block;
+  padding-top: 5px;
+  font-size: 16px;
+}
+

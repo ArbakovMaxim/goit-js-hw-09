@@ -4,9 +4,10 @@ import "flatpickr/dist/flatpickr.min.css";
 
 
 const refs ={
+    timer : document.querySelector(".timer"),
     input : document.querySelector("#datetime-picker"),
     btnStart : document.querySelector('[data-start]'),
-        timer : {
+        clock : {
             days : document.querySelector('[data-days]'),
             hours : document.querySelector('[data-hours]'),
             minutes : document.querySelector('[data-minutes]'),
@@ -59,10 +60,10 @@ function interfaceOutput(){
         if(days === 0 && hours === 0 && minutes === 0 && seconds === 0){
             clearInterval(timerId);
     }
-        refs.timer.days.textContent = addLeadingZero(days);
-        refs.timer.hours.textContent = addLeadingZero(hours);
-        refs.timer.minutes.textContent = addLeadingZero(minutes);
-        refs.timer.seconds.textContent = addLeadingZero(seconds);
+        refs.clock.days.textContent = addLeadingZero(days);
+        refs.clock.hours.textContent = addLeadingZero(hours);
+        refs.clock.minutes.textContent = addLeadingZero(minutes);
+        refs.clock.seconds.textContent = addLeadingZero(seconds);
 }
 }
 
